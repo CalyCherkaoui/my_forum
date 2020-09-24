@@ -45,7 +45,7 @@ To get a local copy of the repository please run the following commands on your 
 $ git clone git@github.com:CalyCherkaoui/my_forum.git
 $ cd gourmet_blog
 $ git checkout development
-$ bundle install
+$ bundle install --without production
 $ yarn install --check-files
 $ rails db:create
 $ rails db:migrate
@@ -77,4 +77,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT]() licensed.
+All source codeis available jointly under the MIT License. See
+[MIT licence]() for details.
