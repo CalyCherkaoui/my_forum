@@ -77,5 +77,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-All source codeis available jointly under the MIT License. See
-[MIT licence]() for details.
+All source codeis available jointly under the MIT License.
+See [MIT licence]() for details.
