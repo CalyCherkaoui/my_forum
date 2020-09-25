@@ -1,7 +1,47 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/bin/spring": {
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/environment.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          null,
+          1
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/application.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/boot.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/environments/test.rb": {
         "lines": [
           null,
           null,
@@ -9,109 +49,229 @@
           null,
           null,
           1,
-          0,
-          0,
           null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
           null,
           null
         ]
       },
-      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/channels/application_cable/channel.rb": {
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/initializers/application_controller_renderer.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       },
-      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/channels/application_cable/connection.rb": {
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/initializers/assets.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       },
-      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/jobs/application_job.rb": {
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/initializers/backtrace_silencers.rb": {
         "lines": [
-          0,
           null,
           null,
           null,
           null,
           null,
-          0
-        ],
-        "branches": {
-        }
+          null,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/initializers/content_security_policy.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/initializers/cookies_serializer.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          1
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/initializers/filter_parameter_logging.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/initializers/inflections.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/initializers/mime_types.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/initializers/wrap_parameters.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/routes.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
       },
       "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/helpers/application_helper.rb": {
         "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null
+        ]
       },
       "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/helpers/static_pages_helper.rb": {
         "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/controllers/static_pages_controller.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null
+        ]
       },
       "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/controllers/application_controller.rb": {
         "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          null
+        ]
       },
-      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/models/application_record.rb": {
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/controllers/static_pages_controller.rb": {
         "lines": [
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/mailers/application_mailer.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1601054947
+    "timestamp": 1601057759
   }
 }

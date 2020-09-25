@@ -23,10 +23,10 @@ end
 
 group :development, :test do
   gem 'rspec-rails',              '~> 4.0.1'
+  gem 'capybara',                 '3.32.2'
 end
 
 group :test do
-  gem 'capybara',                 '3.32.2'
   gem 'selenium-webdriver',       '3.142.7'
   gem 'webdrivers',               '4.3.0'
   gem 'rails-controller-testing', '1.0.4'
