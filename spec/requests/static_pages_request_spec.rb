@@ -16,4 +16,18 @@ RSpec.describe "StaticPages", type: :request do
 
   end
 
+  describe 'GET #about' do
+
+    before(:example) { get static_pages_about_path }
+
+    it 'successfully get the about page' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it 'renders about template' do
+      expect(response).to render_template('about')
+    end
+
+  end
+
 end
