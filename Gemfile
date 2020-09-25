@@ -37,6 +37,8 @@ group :test do
   gem 'simplecov',                 require: false
   gem 'database_cleaner-active_record'
   gem 'shoulda-matchers',         '~> 4.0'
+  gem 'shoulda',                  '~> 4.0'
+  gem 'shoulda-context',          '~> 2.0'
 end
 
 group :production do
