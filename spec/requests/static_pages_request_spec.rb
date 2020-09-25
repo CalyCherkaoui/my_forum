@@ -10,6 +10,15 @@ RSpec.describe "StaticPages", type: :request do
   #   @page_title = ' | Gourmet Blog'
   # end
 
+  describe 'Get the root' do
+    before(:example) { get root_path }
+
+    it 'successfully get the root page' do
+      expect(response).to have_http_status(:ok)
+    end
+
+  end
+
   describe 'GET #home' do
 
     before(:example) { get static_pages_home_path }
