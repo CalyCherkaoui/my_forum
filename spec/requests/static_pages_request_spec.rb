@@ -2,10 +2,13 @@ require 'rails_helper'
 
 RSpec.describe "StaticPages", type: :request do
 
-  def setup
+  before(:context) do
     @page_title = ' | Gourmet Blog'
-
   end
+
+  # def setup
+  #   @page_title = ' | Gourmet Blog'
+  # end
 
   describe 'GET #home' do
 
