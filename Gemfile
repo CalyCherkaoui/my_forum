@@ -21,6 +21,10 @@ group :development do
   gem 'spring-watcher-listen', '2.0.1'
 end
 
+group :development, :test do
+  gem 'rspec-rails',              '~> 4.0.1'
+end
+
 group :test do
   gem 'capybara',                 '3.32.2'
   gem 'selenium-webdriver',       '3.142.7'
@@ -33,7 +37,6 @@ group :test do
   gem 'simplecov',                 require: false
   gem 'database_cleaner-active_record'
   gem 'shoulda-matchers',         '~> 4.0'
-  gem 'rspec-rails'
 end
 
 group :production do
