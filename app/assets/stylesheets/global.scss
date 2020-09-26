@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Palette */
+// $my_dark_main: #0A164E;
+$my_nav_backg: black;
+$my_dark_main: #1b2d38;
+$my_light_second: #2EB641;
+$tangerine: #da4221;
+$my-light-blue: #2ab2c0;
+$text-dark: #272727;
+$classic-blue: #0f4c81;
+$font_text: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+// $font_text: 'Open Sans', sans-serif;
+$font_logo: 'Playfair Display', serif;
+$font_logo_keto: 'Playfair Display', serif;
+$font_article_title: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+@keyframes fading {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* global */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  min-width: 22rem;
+}
+
+body {
+  // background-color: white;
+  width: 100%;
+  min-width: 22rem;
+  display: block;
+}
+
+/* navigation */
+
+.myheader {
+  width: 100%;
+  margin: 0;
+  padding: 0.3rem 0.1rem 0.8rem 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $my_nav_backg;
+  position: fixed;
+  z-index: 4000;
+  a {
+    text-decoration: none;
+  }
+}
+
+.my-brand-nav {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 2rem;
+  // font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: inherit;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: $my_light_second;
+  font-family: $font_logo_keto !important;
+
+  &:hover {
+    color: $my_light_second;
+  }
+
+  span {
+    font-family: $font_logo;
+    color: whitesmoke;
+  }
+}
+
+.my-nav-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.my-nav-list {
+  list-style: none;
+  margin: 0;
+  display: none;
+}
+
+.nav-list__item {
+  padding: 0.8rem 0.9rem;
+}
+
+.nav-list__link {
+  font-size: 0.9rem;
+  // font-family: "Ramabhadra", sans-serif;
+  // font-family: 'Playfair Display', sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  letter-spacing: 0.938px;
+  line-height: 23px;
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-list__link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform ease-in-out 0.5s;
+}
+
+.nav-list__link:hover {
+  color: white;
+  animation: fading 1s ease-out 0s;
+}
+
+.nav-list__link:hover::after {
+  transform: scale(1, 1);
+}
+
+.my-hamburger-btn {
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+}
+
+.my-hamburger-btn .hamburger-btn__line {
+  width: 2.5rem;
+  height: 3px;
+  background-color: $my_light_second;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.my-hamburger-btn .hamburger-btn__line::before,
+.my-hamburger-btn .hamburger-btn__line::after {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 3px;
+  background-color: $my_light_second;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.my-hamburger-btn .hamburger-btn__line::before {
+  transform: translateY(-9px);
+}
+
+.my-hamburger-btn .hamburger-btn__line::after {
+  transform: translateY(9px);
+}
+
+@media screen and (min-width: 1160px) {
+  .myheader {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 810px) and (max-width: 1160px) {
+  .myheader {
+    flex-direction: column;
+  }
+
+  .my-nav-wrapper {
+    margin-top : 0.8rem;
+  }
+
+  .my-nav-list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .my-nav-list {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 800px) {
+  .myheader {
+    flex-direction: row;
+  }
+
+  .my-nav-wrapper {
+    margin: 1rem;
+  }
+
+
+  .my-brand-nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 419px) {
+  .myheader {
+    flex-direction: row;
+  }
+  .my-brand-nav {
+    padding-left: 0.5rem;
+    padding-right: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    overflow: hidden;
+  }
+}
+
+/* Footer */
+
+footer {
+  height: 10vh;
+  background-color: $my_dark_main;
+  color: white;
+  font-size: 0.9rem;
+  font-family: $font_text ;
+  overflow: hidden;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: [row1-start] 2fr [row1-end row2-start] 1fr [row2-end];
+  grid-template-areas: 
+    "brand navigation navigation"
+    "copyright copyright copyright";
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+
+.brand_footer {
+  grid-area: brand;
+  overflow: hidden;
+}
+
+.my-logo-footer {
+  padding-left: 1.3rem;
+  padding-right: 1rem;
+  font-size: 1.3rem;
+  // font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  overflow: hidden;
+}
+
+.navigation-footer {
+  grid-area: navigation;
+  overflow: hidden;
+  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 
+    "follow links";
+  column-gap: 0.3rem;
+
+  .col_contact {
+    grid-area: follow;
+    place-self: center;
+    i {
+      font-size: 0.9rem;
+      padding: 0.3rem;
+    }
+  }
+
+  .footer-links {
+    grid-area: links;
+    place-self: center;
+    display: inline-flex;
+    div {
+      padding: 0.5rem;
+    }
+  }
+
+}
+
+.row_copyright {
+  grid-area: copyright;
+  // align-self: center;
+  place-self: center;
+  font-size: 0.7rem !important;
+  i {
+    color: $tangerine;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  footer {
+    height: 15vh;
+    font-size: 0.7rem;
+    overflow: hidden;
+    padding: 0.2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [row1-start] 1fr [row1-end row2-start] 2fr [row2-end row3-start] 1fr[row3-end];
+    grid-template-areas: 
+      "brand"
+      "navigation"
+      "copyright";
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }
+
+  .brand_footer {
+    grid-area: brand;
+    place-self: center;
+    overflow: hidden;
+  }
+
+  .my-logo-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    // font-family: 'Playfair Display', serif;
+    font-weight: 700;
+  }
+
+  .navigation-footer {
+    grid-area: navigation;
+    overflow: hidden;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+
+    .col_contact {
+      justify-self: center;
+      i {
+        font-size: 0.9rem;
+        padding: 0.3rem;
+      }
+    }
+
+    .footer-links {
+      justify-self: center;
+      display: inline-flex;
+      div {
+        padding: 0.5rem;
+      }
+    }
+
+  }
+
+  .row_copyright {
+    grid-area: copyright;
+    // align-self: center;
+    place-self: center;
+    font-size: 0.5rem !important;
+    i {
+      color: $tangerine;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
