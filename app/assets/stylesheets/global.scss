@@ -8,14 +8,14 @@
 
 //color bg
 $color_nav_bg: white;
-$color_footer_bg: #0A164E;
+$color_footer_bg: #F2F2F2;
 
 //color logo and nav
 
 $color_logo_main: #2EB641;
 $color_logo_second: #0A164E;
 $color_navigation: #0A164E;
-$color_footer_txt: white;
+$color_footer_txt: #272727;
 
 //color titles
 $color_big_title: #1b2d38;
@@ -278,11 +278,12 @@ body {
 /* Footer */
 
 footer {
-  height: 10vh;
+  height: 20vh;
   background-color: $color_footer_bg;
   color: $color_footer_txt;
   font-size: 0.9rem;
   font-family: $font_ordinary_text;
+  border-top: 1px solid rgba(0,0,0,0.15);
   overflow: hidden;
   padding: 0.5rem;
   display: grid;
@@ -324,7 +325,7 @@ footer {
     grid-area: follow;
     place-self: center;
     i {
-      font-size: 0.9rem;
+      font-size: 1rem;
       padding: 0.3rem;
     }
   }
@@ -344,7 +345,7 @@ footer {
   grid-area: copyright;
   // align-self: center;
   place-self: center;
-  font-size: 0.7rem !important;
+  font-size: 0.8rem !important;
   i {
     color: $tangerine;
     padding: 0;
