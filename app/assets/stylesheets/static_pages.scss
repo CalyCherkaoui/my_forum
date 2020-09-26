@@ -1,0 +1,15 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+/* hero section */
+.hero_section {
+  min-height: 100vh;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 810px) and (max-width: 1160px) {
+  .hero_section {
+    margin-top: 8rem;
+  }
+}
