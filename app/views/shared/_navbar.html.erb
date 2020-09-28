@@ -24,18 +24,8 @@
           <% end %>
           <!-- <a href="result.html" class="nav-list__link"><i class="far fa-user"></i> Profile</a> -->
         </li>
-        <li class="nav-list__item">
-          <%= link_to "login", root_path, class: "nav-list__link" %>
-          <!-- <a href="#" class="nav-list__link">Login</a> -->
-        </li>
-        <li class="nav-list__item">
-          <%= link_to "Signup", root_path, class: "nav-list__link" %>
-          <!-- <a href="#" class="nav-list__link">Signup</a> -->
-        </li>
-        <li class="nav-list__item">
-          <%= link_to "logout", root_path, class: "nav-list__link" %>
-          <!-- <a href="#" class="nav-list__link">Logout</a> -->
-        </li>
+
+        <%= authentication_view_helper(author_signed_in?, current_author) %>
     </ul>
     <div class="my-hamburger-btn">
       <div class="hamburger-btn__line"></div>
