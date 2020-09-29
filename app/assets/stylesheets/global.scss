@@ -7,7 +7,7 @@
 /* palette 2 white: #FFFFFF   beige: #F4F1E0  red: #F14C38  blue_dark: #144955 */
 
 //color bg
-$color_nav_bg: white;
+$color_nav_bg: rgba(253, 253, 253, 1);
 $color_footer_bg: #F2F2F2;
 
 //color logo and nav
@@ -296,7 +296,6 @@ footer {
   row-gap: 1rem;
 }
 
-
 .brand_footer {
   grid-area: brand;
   overflow: hidden;
@@ -421,3 +420,11 @@ footer {
   }
 }
 
+/* Authentication forms */
+
+.authentication_forms {
+  min-height: 100vh;
+  overflow: hidden;
+  margin-top: 5rem;
+  background-color: $color_logo_second;
+}
