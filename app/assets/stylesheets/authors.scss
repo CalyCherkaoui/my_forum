@@ -2,3 +2,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import 'settings.scss';
+
+.authentication_form {
+  height: calc( 100vh - var(--nav_height_desk) - var(--footer_height_desk));
+  margin: 0;
+  // background-color: coral;
+}
+
+.authentication_form_container {
+  margin: 0;
+  min-height: 70%;
+  background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: [row1-start] 1fr [row1-end row2-start] 3fr [row2-end];
+  grid-template-areas: 
+    "cover form_header"
+    "cover form";
+  border-radius: 20px;
+  column-gap: 1rem;
+
+  .cover {
+    grid-area: cover;
+    background-image: url(asset_path("signin_img.jpg"));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .form_header {
+    grid-area: form_header;
+    text-align: center;
+    font-family: $font_interf_bold;
+  }
+
+  .form {
+    grid-area: form;
+  }
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .authentication_form_container {
+    height: calc( 100vh - var(--nav_height_mobile) - var(--footer_height_mobile));
+    grid-template-columns: 1fr;
+    grid-template-rows: [row1-start] 1fr [row1-end row2-start] 3fr [row2-end];
+    grid-template-areas: 
+      "form_header"
+      "form";
+  }
+}
+
+
+@media screen and (min-width: 801px) and (max-width: 1160px) {
+  .authentication_form_container {
+    height: calc( 100vh - var(--nav_height_tablet) - var(--footer_height_tablet));
+  }
+}

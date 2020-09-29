@@ -37,10 +37,34 @@ $font_nav: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
 $font_logo_main: 'Abril Fatface', cursive, 'Open Sans', sans-serif;
 $font_logo_second: 'Abril Fatface', cursive, 'Open Sans', sans-serif;
 
+// Interface typography
+
+$font_interf_bold: 'Abril Fatface', cursive, 'Open Sans', sans-serif;
+$font_interf_small: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 // article typography
 $font_big_title: 'Abril Fatface', cursive, 'Open Sans', sans-serif;
 $font_ordinary_text: 'Open Sans', sans-serif;
 $font_second_title:  'Raleway', sans-serif;
+
+// box models
+
+:root {
+  --nav_height_desk: 76px;
+  --nav_height_tablet: 127px;
+  --nav_height_mobile: 72px;
+  --footer_height_desk: 127px;
+  --footer_height_desk: 127px;
+  --footer_height_tablet: 127px;
+}
+
+$nav_height_desk: 76px;
+$nav_height_tablet: 127px;
+$nav_height_mobile: 72px;
+
+$footer_height_desk: 127px;
+$footer_height_tablet: 127px;
+$footer_height_mobile: 190px;
 
 /* animation mixin */
 @keyframes fading {

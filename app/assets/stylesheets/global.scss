@@ -4,13 +4,17 @@
 
 .myheader {
   width: 100%;
+  height: $nav_height_desk;
   margin: 0;
   padding: 0.3rem 0.1rem 0.8rem 0.1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $color_nav_bg;
-  position: fixed;
+  // position: fixed;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
   z-index: 4000;
   a {
     text-decoration: none;
@@ -129,12 +133,14 @@
 
 @media screen and (min-width: 1160px) {
   .myheader {
+    height: $nav_height_desk;
     flex-direction: row;
   }
 }
 
-@media screen and (min-width: 810px) and (max-width: 1160px) {
+@media screen and (min-width: 801px) and (max-width: 1160px) {
   .myheader {
+    height: $nav_height_tablet;
     flex-direction: column;
   }
 
@@ -155,6 +161,7 @@
 
 @media screen and (min-width: 420px) and (max-width: 800px) {
   .myheader {
+    height: $nav_height_mobile;
     flex-direction: row;
   }
 
@@ -174,6 +181,7 @@
 
 @media screen and (max-width: 419px) {
   .myheader {
+    height: $nav_height_mobile;
     flex-direction: row;
   }
   .my-brand-nav {
@@ -188,7 +196,7 @@
 /* Footer */
 
 footer {
-  height: 20vh;
+  height: $footer_height_desk;
   background-color: $color_footer_bg;
   color: $color_footer_txt;
   font-size: 0.9rem;
@@ -264,7 +272,7 @@ footer {
 
 @media screen and (max-width: 810px) {
   footer {
-    height: 15vh;
+    height: $footer_height_mobile;
     font-size: 0.7rem;
     overflow: hidden;
     padding: 0.2rem;
