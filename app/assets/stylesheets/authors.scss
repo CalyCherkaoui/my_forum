@@ -64,7 +64,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-
+  
   .field,
   .action {
     // background-color: darkred;
@@ -111,12 +111,17 @@
       }
     }
   }
+}
 
-  .links {
-    margin-top: 1rem;
-    font-size: 0.7rem;
-    a {
-      text-decoration: none;
+.links {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  a {
+    text-decoration: none;
+    margin-bottom: 0.6rem;
+    &:hover {
+      text-decoration: underline;
+      transition: ease 2s;
     }
   }
 }
