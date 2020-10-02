@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  before_action :authors_signed_in?, only: %i[edit destroy]
+  before_action :authenticate_author!
 
   def index
     @authors = Authors.all
