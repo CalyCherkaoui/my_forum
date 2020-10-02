@@ -18,14 +18,28 @@
           <% end %>
           <!-- <a href="#" class="nav-list__link"><i class="fas fa-rss"></i> Subscribe</a> -->
         </li>
-        <li class="nav-list__item">
-          <%= link_to root_path, class: "nav-list__link" do %>
-            <i class="far fa-user"></i> Profile
-          <% end %>
-          <!-- <a href="result.html" class="nav-list__link"><i class="far fa-user"></i> Profile</a> -->
-        </li>
 
-        <%= authentication_view_helper(author_signed_in?, current_author) %>
+        <% if author_signed_in? %>
+
+          <li class="nav-list__item">
+            <%= link_to author_path(current_author), class: "nav-list__link" do %>
+              <i class="far fa-user"></i> <%= current_author.name %> Profile
+            <% end %>
+          </li>
+
+          <li class="nav-list__item">
+            <%= link_to "logout", destroy_author_session_path, class: "nav-list__link"%>
+          </li>
+
+        <% else %> 
+          
+          <%= link_to new_author_session_path, class: "nav-list__link" do %>
+              Log-in
+          <% end %>
+
+        <% end %>
+
+        <!-- <%= authentication_view_helper %> -->
     </ul>
     <div class="my-hamburger-btn">
       <div class="hamburger-btn__line"></div>
