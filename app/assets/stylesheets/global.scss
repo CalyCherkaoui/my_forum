@@ -74,6 +74,9 @@
   color: $color_navigation;
   text-transform: uppercase;
   position: relative;
+  span {
+    text-transform: lowercase !important;
+  }
 }
 
 .nav-list__link::after {
