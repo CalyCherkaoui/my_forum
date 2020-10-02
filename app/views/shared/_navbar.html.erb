@@ -10,32 +10,38 @@
           <%= link_to root_path, class: "nav-list__link" do %>
             <i class="fas fa-concierge-bell"></i> Recipes
           <% end %>
-          <!-- <a href="index.html" class="nav-list__link current"><i class="fas fa-concierge-bell"></i> Recipes</a> -->
         </li>
         <li class="nav-list__item">
           <%= link_to root_path, class: "nav-list__link" do %>
           <i class="fas fa-rss"></i> Subscribe
           <% end %>
-          <!-- <a href="#" class="nav-list__link"><i class="fas fa-rss"></i> Subscribe</a> -->
         </li>
-        <li class="nav-list__item">
-          <%= link_to root_path, class: "nav-list__link" do %>
-            <i class="far fa-user"></i> Profile
-          <% end %>
-          <!-- <a href="result.html" class="nav-list__link"><i class="far fa-user"></i> Profile</a> -->
-        </li>
-        <li class="nav-list__item">
-          <%= link_to "login", root_path, class: "nav-list__link" %>
-          <!-- <a href="#" class="nav-list__link">Login</a> -->
-        </li>
-        <li class="nav-list__item">
-          <%= link_to "Signup", root_path, class: "nav-list__link" %>
-          <!-- <a href="#" class="nav-list__link">Signup</a> -->
-        </li>
-        <li class="nav-list__item">
-          <%= link_to "logout", root_path, class: "nav-list__link" %>
-          <!-- <a href="#" class="nav-list__link">Logout</a> -->
-        </li>
+
+        <% if author_signed_in? %>
+
+          <li class="nav-list__item">
+            <%= link_to author_path(current_author), class: "nav-list__link" do %>
+              <i class="far fa-user"></i> <span>@<%= current_author.username %></span>
+            <% end %>
+          </li>
+
+          <li class="nav-list__item">
+            <%= link_to "logout", destroy_author_session_path, method: :delete,  class: "nav-list__link"%>
+          </li>
+
+        <% else %> 
+          
+          <li class="nav-list__item">
+            <%= link_to 'Login', new_author_session_path, class: "nav-list__link"%>
+          </li>
+
+          <li class="nav-list__item">
+            <%= link_to 'signup', new_author_registration_path, class: "nav-list__link"%>
+          </li>
+
+        <% end %>
+
+        <!-- <%= authentication_view_helper %> -->
     </ul>
     <div class="my-hamburger-btn">
       <div class="hamburger-btn__line"></div>

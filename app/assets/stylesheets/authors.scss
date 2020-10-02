@@ -1,0 +1,146 @@
+// Place all the styles related to the Authors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'settings.scss';
+
+.authentication_form {
+  height: calc( 100vh - var(--nav_height_desk) - var(--footer_height_desk));
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: coral;
+}
+
+.authentication_form_container {
+  min-height: 95%;
+  min-width: 95%;
+  // background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: [row1-start] 1fr [row1-end row2-start] 4fr [row2-end];
+  grid-template-areas: 
+    "cover form_header"
+    "cover form";
+  border-radius: 20px;
+  column-gap: 1rem;
+
+  .cover {
+    grid-area: cover;
+    background-image: url(asset_path("signin_img.jpg"));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .form_header {
+    grid-area: form_header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font_interf_bold;
+    h1 {
+      font-size: 2.5rem;
+      color: $color_txt_dark;
+    }
+  }
+
+  .form {
+    grid-area: form;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: crimson;
+  }
+}
+
+.form_container {
+  // background-color: darkkhaki;
+  height: 85%;
+  width: 85%;
+  display: flex;
+  padding-left: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  
+  .field,
+  .action {
+    // background-color: darkred;
+    margin-bottom: 1rem;
+    width: 100%;
+    font-family: $font_interf_small;
+    color: $color_txt_dark;
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $color_big_title;
+    }
+
+    em {
+      font-size: 0.7rem;
+      color: $color_txt_light;
+    }
+  }
+
+  .field {
+    input {
+      height: 1.5rem;
+      width: 100%;
+      background-color: $color_footer_bg;
+      border: none;
+      border-left: 1px solid $color_navigation;
+    }
+  }
+
+  .actions {
+    input {
+      width: 100%;
+      height: 2rem;
+      border: 1px solid $classic-blue;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $classic-blue;
+      background-color: $light-blue;
+      &:hover {
+        cursor: pointer;
+        background-color: $classic-blue;
+        color: $my_white;
+      }
+    }
+  }
+}
+
+.links {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  a {
+    text-decoration: none;
+    margin-bottom: 0.6rem;
+    &:hover {
+      text-decoration: underline;
+      transition: ease 2s;
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .authentication_form_container {
+    height: calc( 100vh - var(--nav_height_mobile) - var(--footer_height_mobile));
+    grid-template-columns: 1fr;
+    grid-template-rows: [row1-start] 1fr [row1-end row2-start] 3fr [row2-end];
+    grid-template-areas: 
+      "form_header"
+      "form";
+  }
+}
+
+
+@media screen and (min-width: 801px) and (max-width: 1160px) {
+  .authentication_form_container {
+    height: calc( 100vh - var(--nav_height_tablet) - var(--footer_height_tablet));
+  }
+}
