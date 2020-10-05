@@ -20,3 +20,4 @@ require("channels")
 //    $('#flash-panel').slideUp('500');
 //   }, 5000);
 // });
+console.log('hello from pack application js');

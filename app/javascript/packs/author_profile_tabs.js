@@ -1,6 +1,11 @@
-// var tabButtons=document.querySelectorAll("#author_profile .author_profile_articles .tab_container .tab_button_container button");
-// var tabPanels=document.querySelectorAll("#author_profile .author_profile_articles .tab_container .tab_panel");
+import $ from 'jquery';
 
+// var tabButtons = document.querySelectorAll("#author_profile .author_profile_articles .tab_container .tab_button_container > button");
+let tabButtons = $(".tab_button_container > button");
+let tabPanels = $(".tab_panel");
+// var tabPanels = document.querySelectorAll("#author_profile .author_profile_articles .tab_container .tab_panel");
+
+var x = document.querySelectorAll("section");
 // //author profile tabs
 
 // function showPanel(panelIndex) {
