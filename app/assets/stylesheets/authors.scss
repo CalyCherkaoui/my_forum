@@ -144,3 +144,45 @@
     height: calc( 100vh - var(--nav_height_tablet) - var(--footer_height_tablet));
   }
 }
+
+/* Author profile */
+
+// Tabulations in the list of articles part
+
+.tab_container {
+  // background-color: hotpink;
+  width: 100%;
+  min-height: 40vh;
+}
+
+.tab_button_container {
+  // background-color: rgb(33, 196, 236);
+  min-height: 3rem;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+
+  button {
+    margin: 0;
+    width: calc(100%/5);
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid $classic-blue;
+    background-color: transparent;
+    font-size: 0.9rem;
+    font-family: $font_nav;
+    letter-spacing: 0.938px;
+    line-height: 23px;
+    font-weight: 400;
+    color: $color_navigation;
+    text-transform: uppercase;
+    &:hover {
+      color: $my_green;
+      animation: fading 1s ease-out 0s;
+      font-weight: 900;
+      border-bottom: none;
+    }
+  }
+}
+
+
