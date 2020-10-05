@@ -1,0 +1,76 @@
+<section class="author_profile">
+  <div class="author_profile_photo"></div>
+  <div class="author_profile_bio">
+    <div class="name"><%=@author.name%></div>
+    <div class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consequuntur sit ratione sequi? Saepe ratione recusandae ut, amet deserunt accusantium!</div>
+  </div>
+  <div class="author_profile_dashbord">
+    <div class="rate_author">
+      <h3>Rate this author</h3>
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+      </svg>
+    </div>
+    <div class="statistics">
+      <div class="rate_result">
+        <span><%= @author.name%> is rated: 4.5</span>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-star" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288l1.847-3.658 1.846 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.564.564 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+        </svg> <span>by the readers</span>
+      </div>
+
+      <div class="article_published">
+        <span><%= @author.name%> published 12 articles</span>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-richtext" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+          <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
+          <path fill-rule="evenodd" d="M4.5 12.5A.5.5 0 0 1 5 12h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 10h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm1.639-3.708l1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V8.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V8s1.54-1.274 1.639-1.208zM6.25 6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5z"/>
+        </svg>
+      </div>
+
+      <div class="sum_likes">
+        <span><%= @author.name%>'s articles recieved 30k </span>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-suit-heart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"/>
+        </svg>
+      </div>
+
+      <div class="contact_author">
+        <h2>Contact <%= @author.name %></h2>
+        <form>
+          <input type="text" id="contact_title" name="contact_title" placeholder="Type your Message title here!"><br>
+          <textarea name="contact_msg" id="contact_msg" cols="30" rows="10">
+            "Type your message here"
+          </textarea>
+        </form>
+      </div>
+
+      <div class="add_article">
+        <span>Add new article</span>
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-file-earmark-plus" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+          <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
+          <path fill-rule="evenodd" d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+  <div class="author_profile_articles">
+    <div class="tab_container">
+      <div class="tab_button_container">
+        <button>Popular</button>
+        <button>Latest</button>
+        <button>Unpublished</button>
+        <button>Draft</button>
+        <button>All</button>
+      </div>
+
+      <div class="tab_panel">Popular articles</div>
+      <div class="tab_panel">Latest Published articles</div>
+      <div class="tab_panel">Unpublished articles</div>
+      <div class="tab_panel">Drafted articles</div>
+      <div class="tab_panel">All articles</div>
+    </div>
+  </div>
+</section>
