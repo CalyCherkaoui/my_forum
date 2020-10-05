@@ -1,4 +1,5 @@
-<section class="author_profile">
+<% provide(:title, "Author Profile") %>
+<section id="author_profile">
   <div class="author_profile_photo"></div>
   <div class="author_profile_bio">
     <div class="name"><%=@author.name%></div>
@@ -59,11 +60,11 @@
   <div class="author_profile_articles">
     <div class="tab_container">
       <div class="tab_button_container">
-        <button>Popular</button>
-        <button>Latest</button>
-        <button>Unpublished</button>
-        <button>Draft</button>
-        <button>All</button>
+        <button onclick="showPanel(0)">Popular</button>
+        <button onclick="showPanel(1)">Latest</button>
+        <button onclick="showPanel(2)">Unpublished</button>
+        <button onclick="showPanel(3)">Draft</button>
+        <button onclick="showPanel(4)">All</button>
       </div>
 
       <div class="tab_panel">Popular articles</div>

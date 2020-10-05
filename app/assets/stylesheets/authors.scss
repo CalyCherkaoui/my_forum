@@ -185,4 +185,12 @@
   }
 }
 
+.tab_panel {
+  background-color: yellow;
+  border-bottom: $color_navigation 1px solid;
+  border-left: $color_navigation 1px solid;
+  border-right: $color_navigation 1px solid;
+  display: none;
+}
+
 
