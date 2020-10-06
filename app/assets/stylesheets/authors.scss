@@ -166,45 +166,48 @@
     margin: 0;
     width: calc(100%/5);
     cursor: pointer;
-    border: none;
-    border-bottom: 1px solid $classic-blue;
+    // border: none;
     background-color: transparent;
     font-size: 0.9rem;
     font-family: $font_nav;
     letter-spacing: 0.938px;
     line-height: 23px;
-    font-weight: 400;
-    color: $color_navigation;
     text-transform: uppercase;
     &:hover {
       color: $my_green;
       animation: fading 1s ease-out 0s;
       font-weight: 900;
-      border-bottom: none;
     }
   }
 }
 
+.tab_button {
+  border: none;
+  // border-bottom: 1px solid $classic-blue;
+  color: $color_navigation;
+  font-weight: 400;
+}
+
 .tab_button--active {
-  border-bottom: none;
-  border-top: 1px solid $classic-blue;
-  border-left: 1px solid $classic-blue;
-  border-right: 1px solid $classic-blue;
+  border-bottom: 2px solid $classic-blue;
+  // border-bottom: none;
+  // border-top: 1px solid $classic-blue;
+  // border-left: 1px solid $classic-blue;
+  // border-right: 1px solid $classic-blue;
+  color: $my_green;
+  font-weight: 900;
 }
 
 .tab_panel {
-  background-color: yellow;
-  border-bottom: $color_navigation 1px solid;
-  border-left: $color_navigation 1px solid;
-  border-right: $color_navigation 1px solid;
+  // background-color: yellow;
   display: none;
 }
 
 .tab_panel--active {
   display: block;
-  border-bottom: $color_navigation 1px solid;
-  border-left: $color_navigation 1px solid;
-  border-right: $color_navigation 1px solid;
+  // border-bottom: $color_navigation 1px solid;
+  // border-left: $color_navigation 1px solid;
+  // border-right: $color_navigation 1px solid;
 }
 
 

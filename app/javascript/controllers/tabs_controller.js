@@ -13,32 +13,36 @@ export default class extends Controller {
   static targets = ["tabPanel", "tabButton"]
 
   connect () {
-    console.log('connacted now with stimulus')
+    // console.log('this')
     // event.preventDefault()
   }
 
-  initialize() {
-    this.activateTab()
-  }
+  initialize () {
 
-
-  activateTab() {
-    this.tabPanelTargets.forEach( (elem, i) => {
-      elem.classList.toggle("tab_panel--active", this.index == i)
+    this.tabPanelTargets.forEach ( (elem, i) => {
+      elem.classList.toggle("tab_panel--active", 0 == i)
     })
 
     this.tabButtonTargets.forEach( (elem, i) => {
-      elem.classList.toggle("tab_button--active", this.index == i)
-    });
+    elem.classList.toggle("tab_button--active", 0 == i)
+    })
+  
   }
 
-  get index() {
-    return parseInt(this.data.get("index"))
+
+  activateTab (event) {
+    const indicateur = parseInt(event.target.value)
+    // console.log(parseInt(element))
+
+    this.tabPanelTargets.forEach ( (elem, i) => {
+        elem.classList.toggle("tab_panel--active", indicateur == i)
+    })
+
+    this.tabButtonTargets.forEach( (elem, i) => {
+      elem.classList.toggle("tab_button--active", indicateur == i)
+    })
   }
 
-  set index(value) {
-    this.data.set("index", value)
-    this.activateTab()
-  }
+
 
 }

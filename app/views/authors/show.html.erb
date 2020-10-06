@@ -60,11 +60,11 @@
   <div class="author_profile_articles">
     <div class="tab_container" data-controller="tabs">
       <div class="tab_button_container">
-        <button data-action="tabs#activateTab" data-target="tabs.tabButton" data-tabButton-index="0">Popular</button>
-        <button data-action="tabs#activateTab" data-target="tabs.tabButton" data-tabButton-index="1">Latest</button>
-        <button data-action="tabs#activateTab" data-target="tabs.tabButton">Unpublished</button>
-        <button data-action="tabs#activateTab" data-target="tabs.tabButton">Draft</button>
-        <button data-action="tabs#activateTab" data-target="tabs.tabButton">All</button>
+        <button class="tab_button" data-action="click->tabs#activateTab" data-target="tabs.tabButton" value="0">Popular</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="1">Latest</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="2">Unpublished</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="3">Draft</button>
+        <button class="tab_button" data-action="tabs#activateTab" data-target="tabs.tabButton" value="4">All</button>
       </div>
 
       <div class="tab_panel" data-target="tabs.tabPanel">Popular articles</div>
