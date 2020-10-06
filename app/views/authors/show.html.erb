@@ -98,12 +98,16 @@
       <div class="tab_panel" data-target="tabs.tabPanel">
         <div class="articles_list_container">
           <div class="article_card_container">
-            <div class="article_card_image"></div>
+
+            <div class="article_card_image">
+              <%= image_tag("cover_img.jpg", alt: "Edit Entry") %>
+            </div>
+
             <div class="article_card_title">
               <div class="article_title">Lorem ipsum dolor sit amet.</div>
-              <div class="article_category">Read it in <span>Vegan</span></div>
-              <div class="publication_date">Published on October 12th 2020</div>
+              <div class="article_description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos ab, blanditiis illo hic recusandae omnis.</div>
             </div>
+
             <div class="article_card_stats">
 
               <div class="rate stat">
@@ -175,7 +179,9 @@
                 </span>
                 times quoted
               </div>
+            </div>
 
+            <div class="article_card_tools">
               <div class="utile_links">
                 <a href="#" class="tools_link">
                   <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -201,7 +207,11 @@
                   Publish article
                 </a>
               </div>
+            </div>
 
+            <div class="article_card_foot">
+              <div class="article_category">Read it in <span>Vegan</span></div>
+              <div class="publication_date">Published on October 12th 2020</div>
             </div>
           </div>
         </div>
