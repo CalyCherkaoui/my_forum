@@ -147,6 +147,206 @@
 
 /* Author profile */
 
+#author_profile {
+  min-height: calc( 100vh - var(--nav_height_desk) - var(--footer_height_desk));
+  // background-color: turquoise;
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-template-rows: [row1-start] 2fr [row1-end row2-start] 2fr [row2-end row3-start] 5fr [row3-end];
+  grid-template-areas: 
+    "bio photo"
+    "bio dashbord"
+    "articles dashbord";
+}
+
+@media screen and (max-width: 800px) {
+  #author_profile {
+    height: calc( 100vh - var(--nav_height_mobile) - var(--footer_height_mobile));
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "photo"
+    "bio"
+    "articles"
+    "dashbord";
+  }
+}
+
+.author_profile_photo {
+  grid-area: photo;
+}
+
+// ------
+
+.author_profile_bio {
+  // background-color: violet;
+  grid-area: bio;
+  padding: 5%;
+}
+
+.bio_card_container {
+  // background-color: yellow;
+  padding: 10%;
+
+  -webkit-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+  -moz-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+       box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+
+  .name {
+    font-family: $font_interf_bold;
+    font-size: 1.7rem;
+    color: $color_navigation;
+    margin-bottom: 0.8rem;
+  }
+
+  .bio {
+    font-family: $font_ordinary_text;
+    color: $color_txt_dark;
+    font-weight: 550;
+    font-size: 1.2rem;
+  }
+}
+
+// ------
+
+.author_profile_dashbord {
+  grid-area: dashbord;
+  // background-color: teal;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.rate_author {
+  // background-color: thistle;
+  margin-bottom: 1.5rem;
+  p {
+    color: $color_navigation;
+    font-size: 1rem;
+    font-family: $font_nav;
+    letter-spacing: 0.938px;
+    line-height: 23px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+ .rating_stars {
+   margin-top: 0.5rem;
+   text-align: center;
+ }
+}
+
+.statistics {
+  // background-color: coral;
+  padding: 1rem;
+}
+
+.statistics_card {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 5%;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+  -moz-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+       box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+}
+
+.contact_author {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  p {
+    color: $color_navigation;
+    font-size: 1rem;
+    font-family: $font_nav;
+    letter-spacing: 0.938px;
+    line-height: 23px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.contact_form_container {
+  // background-color: cornflowerblue;
+  input {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    height: 2rem;
+    width: 100%;
+    border: none;
+    border-left: 2px solid $color_navigation;
+    background-color: $color_footer_bg;
+    &::placeholder {
+      // margin-left: 0.5rem;
+      font-size: 1rem;
+      font-family: $font_ordinary_text;
+      color: $my_grey;
+    }
+  }
+
+  textarea {
+    // background-color: coral;
+    margin-bottom: 0.3rem;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: $color_footer_bg;
+    border: none;
+    &::placeholder {
+      // margin-left: 0.5rem;
+      font-size: 1rem;
+      font-family: $font_ordinary_text;
+      color: $my_grey;
+    }
+  }
+
+  button {
+    margin-bottom: 0.3rem;
+    width: 100%;
+    height: 1.5rem;
+    height: 2rem;
+    border: 1px solid $my_green;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $my_green;
+    background-color: $my_light_green;
+    &:hover {
+      cursor: pointer;
+      background-color: $my_green;
+      color: $my_white;
+    }
+  }
+}
+
+// -------
+
+.add_article,
+.edit_profile {
+  button {
+    width: 100%;
+    height: 3rem;
+    background-color: $classic-blue;
+    color: $my_white;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-family: $font_nav;
+    letter-spacing: 0.938px;
+    line-height: 23px;
+    font-weight: 600;
+    border: 1px solid $classic-blue;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+
+      background-color: $light-blue;
+      color: $color_navigation;
+    }
+
+  }
+}
+// -------
+
+.author_profile_articles {
+  grid-area: articles;
+}
+
 // Tabulations in the list of articles part
 
 .tab_container {
