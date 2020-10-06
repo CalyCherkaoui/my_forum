@@ -399,8 +399,9 @@
 }
 
 .tab_panel {
-  // background-color: yellow;
+  background-color: yellow;
   display: none;
+  padding: 4%;
 }
 
 .tab_panel--active {
@@ -410,4 +411,36 @@
   // border-right: $color_navigation 1px solid;
 }
 
+// articles gallery
 
+.articles_list_container {
+  background-color: cyan;
+  padding: 1rem;
+}
+
+.article_card_container {
+  background-color: darkorange;
+  margin-bottom: 1.5rem;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+  -moz-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+       box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: [row1-start] 3fr [row1-end row2-start] 2fr [row2-end];
+  grid-template-areas: 
+    "artcover artstats"
+    "arttitle artstats";
+}
+
+.article_card_image {
+  grid-area: artcover;
+}
+
+.article_card_title {
+  grid-area: arttitle;
+}
+
+.article_card_stats {
+  grid-area: artstats;
+  padding: 3%;
+}
