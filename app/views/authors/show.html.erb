@@ -58,22 +58,22 @@
     </div>
   </div>
   <div class="author_profile_articles">
-    <div class="tab_container">
+    <div class="tab_container" data-controller="tabs">
       <div class="tab_button_container">
-        <button onclick="showPanel(0)">Popular</button>
-        <button onclick="showPanel(1)">Latest</button>
-        <button onclick="showPanel(2)">Unpublished</button>
-        <button onclick="showPanel(3)">Draft</button>
-        <button onclick="showPanel(4)">All</button>
+        <button data-action="tabs#activateTab" data-target="tabs.tabButton" data-tabButton-index="0">Popular</button>
+        <button data-action="tabs#activateTab" data-target="tabs.tabButton" data-tabButton-index="1">Latest</button>
+        <button data-action="tabs#activateTab" data-target="tabs.tabButton">Unpublished</button>
+        <button data-action="tabs#activateTab" data-target="tabs.tabButton">Draft</button>
+        <button data-action="tabs#activateTab" data-target="tabs.tabButton">All</button>
       </div>
 
-      <div class="tab_panel">Popular articles</div>
-      <div class="tab_panel">Latest Published articles</div>
-      <div class="tab_panel">Unpublished articles</div>
-      <div class="tab_panel">Drafted articles</div>
-      <div class="tab_panel">All articles</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Popular articles</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Latest Published articles</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Unpublished articles</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">Drafted articles</div>
+      <div class="tab_panel" data-target="tabs.tabPanel">All articles</div>
     </div>
   </div>
 </section>
 
-<%= javascript_pack_tag 'author_profile_tabs' %>
+<!-- <%= javascript_pack_tag 'author_profile_tabs' %> -->
