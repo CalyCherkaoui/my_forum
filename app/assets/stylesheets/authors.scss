@@ -152,11 +152,17 @@
   // background-color: turquoise;
   display: grid;
   grid-template-columns: 5fr 2fr;
-  grid-template-rows: [row1-start] 2fr [row1-end row2-start] 2fr [row2-end row3-start] 5fr [row3-end];
+  grid-template-rows: auto;
   grid-template-areas: 
-    "bio photo"
-    "bio dashbord"
-    "articles dashbord";
+    "bioart imgstats";
+}
+
+.photo_stats_wrapper {
+  grid-area: imgstats;
+}
+
+.bio-articles_wrapper {
+  grid-area: bioart;
 }
 
 @media screen and (max-width: 800px) {
@@ -165,23 +171,31 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "photo"
-    "bio"
-    "articles"
-    "dashbord";
+    "imgstats"
+    "bioart";
   }
 }
 
 .author_profile_photo {
   grid-area: photo;
+  padding-top: 2rem;
+  padding-left: 10%;
+  padding-right: 10%;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+  }
 }
 
 // ------
 
 .author_profile_bio {
   // background-color: violet;
-  grid-area: bio;
-  padding: 5%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .bio_card_container {
@@ -344,7 +358,11 @@
 // -------
 
 .author_profile_articles {
-  grid-area: articles;
+// background-color: indigo;
+padding-top: 0;
+padding-bottom: 2rem;
+padding-right: 1rem;
+padding-left: 1rem;
 }
 
 // Tabulations in the list of articles part
@@ -414,19 +432,19 @@
 // articles gallery
 
 .articles_list_container {
-  background-color: cyan;
+  // background-color: cyan;
   padding: 1rem;
 }
 
 .article_card_container {
-  background-color: darkorange;
+  // background-color: darkorange;
   margin-bottom: 1.5rem;
   -webkit-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
   -moz-box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
        box-shadow: 0 2px 6px 0 rgba(10,22,78,0.15);
   display: grid;
   grid-template-columns: 3fr 2fr;
-  grid-template-rows: [row1-start] 4fr [row1-end row2-start] 2fr [row2-end row3-start] 1fr [row3-end];
+  grid-template-rows: [row1-start] auto [row1-end row2-start] auto [row2-end row3-start] auto [row3-end];
   grid-template-areas: 
     "artcover artstats"
     "arttitle arttool"
@@ -435,30 +453,25 @@
 
 .article_card_image {
   grid-area: artcover;
-  background-color: fuchsia;
-  // padding-right: 2rem;
-  // height: 40vh;
+  // background-color: fuchsia;
+
   img {
     object-fit: cover;
     width: 100%;
-    height: 266px;
-    // size: 20vmin;
-    // size: 160x100;
+    height: 260px;
   }
 }
 
 .article_card_title {
   grid-area: arttitle;
-  background-color: green;
-  padding: 5%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-evenly;
+  // background-color: green;
+  padding: 1rem;
 
   .article_title {
     font-size: 1.5rem;
     font-family: $font_big_title;
     color: $color_big_title;
+    margin-bottom: 0.3rem;
   }
 
   .article_description {
@@ -470,19 +483,20 @@
 }
 
 .article_card_stats {
-  background-color: indianred;
+  // background-color: indianred;
   grid-area: artstats;
-  padding-left: 1rem;
-  padding-right: 0.5rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  // padding-left: 1rem;
+  // padding-right: 0.5rem;
+  // padding-top: 2rem;
+  // padding-bottom: 2rem;
+  padding: 5%;
   .stat {
     margin-bottom: 0.7rem;
     color: $color_navigation;
     font-size: 1rem;
     font-family: $font_nav;
     letter-spacing: 0.938px;
-    line-height: 23px;
+    line-height: 19px;
     font-weight: 500;
   }
 
@@ -490,7 +504,7 @@
 
 .article_card_tools {
   grid-area: arttool;
-  background-color: indigo;
+  // background-color: indigo;
   // display: flex;
   // padding: 1rem;
   display: flex;
@@ -499,8 +513,8 @@
 }
 
 .utile_links {
-  background-color: deeppink;
-  width: 90%;
+  // background-color: deeppink;
+  width: 95%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -519,7 +533,7 @@
   font-size: 1rem;
   font-family: $font_nav;
   letter-spacing: 0.938px;
-  line-height: 23px;
+  line-height: 18px;
   font-weight: 550;
   padding: 0.5rem;
   // margin-bottom: 0.5rem;
@@ -532,4 +546,13 @@
 
 .article_card_foot {
   grid-area: artfoot;
+  padding: 1rem;
+  display: inline;
+  color: $color_txt_light;
+  font-size: 0.7rem;
+  font-family: $font_nav;
+  letter-spacing: 0.938px;
+  line-height: 15px;
+  font-weight: 500;
+  // background-color: $color_footer_bg;
 }
