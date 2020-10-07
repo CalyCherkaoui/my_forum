@@ -9,6 +9,10 @@ class AuthorsController < ApplicationController
     @author = Author.find(params[:id])
   end
 
+  def edit
+    @author = Author.find(params[:id])
+  end
+
   def destroy
     author = Author.find(params[:id])
     if author
