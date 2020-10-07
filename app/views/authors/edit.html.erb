@@ -1,0 +1,43 @@
+<% provide(:title, 'Edit Profile') %>
+<section id="author_edit">
+  
+  <div class="author_edit_header">
+    <h1>
+      Hi
+      <%= link_to author_path(current_author) do %>
+        @<%= current_author.username %>
+      <% end %>
+       !
+      </h1>
+    <h3>Your readers are thrilled to know more about you. Feel free to edit your biography and to add a nice profile photo.</h3>
+  </div>
+
+  <div class="author_edit_editor">
+    <div class="author_edit_editor_wrapper">
+
+      <div class="edit_biography">
+        Bio
+      </div>
+      <div class="edit_name_social">
+        Name
+        <i class="fas fa-globe-africa"></i>
+        <i class="fas fa-at">Email</i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-twitch"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-pinterest-p"></i>
+      </div>
+      <div class="edit_photo">
+        upload your 
+      </div>
+      <div class="edit_attributes">
+        <%= link_to 'Change your user name', edit_author_registration_path %>
+        <%= link_to 'Change your password',  edit_author_password_path %>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
