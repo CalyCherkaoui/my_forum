@@ -7,7 +7,7 @@ class Author < ApplicationRecord
   validates :email, uniqueness: true
   validates :username, uniqueness: true, presence: true
   has_one :profile, dependent: :destroy
-  accepts_nested_attributes_for :profile, allow_destroy: true, update_only: true
+  # accepts_nested_attributes_for :profile, allow_destroy: true, update_only: true
 
   protected
 
