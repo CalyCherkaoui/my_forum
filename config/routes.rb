@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     passwords: 'authors/passwords'
   }
 
-  resources :authors, only: %i[index show edit destroy]
+  resources :author do
+    resources :profile
+  end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
