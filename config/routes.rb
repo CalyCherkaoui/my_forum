@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     passwords: 'authors/passwords'
   }
 
-  resources :author do
-    resources :profile
+  resources :authors do
+    resource :profile, :controller => 'authors/profile'
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
