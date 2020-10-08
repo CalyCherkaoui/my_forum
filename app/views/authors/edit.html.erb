@@ -41,3 +41,16 @@
 
 </section>
 
+<section>
+  <%= form_for [@author, @profile] do |f| %>
+
+        <%= f.label :pronouns %>
+        <%= f.text_area :pronouns %><br>
+        <%= f.label :speciality %>
+        <%= f.text_area :speciality %>
+        <br>
+
+        <%= f.submit %>
+  <% end %>
+</section>
+
