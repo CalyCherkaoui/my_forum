@@ -20,16 +20,17 @@ class Authors::ProfileController < ApplicationController
     
   # end
   
-  # GET /authors/1/edit
+  # GET /authors/1/profile.2
   def edit
     @profile = @author.profile
   end
 
   # POST /authors
   def update
-    raise params.inspect
+    # raise params.inspect
+    profile = @author.profile
  
-    if @author.profile.update(profile_params)
+    if profile.update(profile_params)
       redirect_to author_path(@author)
     else
       render :edit
