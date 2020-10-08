@@ -54,16 +54,6 @@ class AuthorsController < ApplicationController
     @author = Author.find(params[:id])
   end
 
-  def profile_params
-      params.require(:profile).permit(
-                              :id, :pronouns, :title, :speciality, :bio,
-                              :website_url, :blog, :email, :facebook,
-                              :twitch, :twitter, :instagram, :pinterest,
-                              :linkedin, :pateron
-      )
-  end
-  
-
   # def author_params
   #   params.require(:authors).permit(
   #     :id, :name, :uer_name,
