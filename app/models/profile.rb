@@ -6,7 +6,7 @@ class Profile < ApplicationRecord
 
   def social_media
 
-    social = ['facebook', 'instagram']
+    social = ['blog', 'facebook', 'twitch', 'instagram', 'twitter', 'pinterest', 'linkedin', 'pateron']
     output = {}
     self.attributes.each do |key, value|
       if social.include?(key) && value
