@@ -8,12 +8,16 @@ class Profile < ApplicationRecord
 
     social = ['blog', 'facebook', 'twitch', 'instagram', 'twitter', 'pinterest', 'linkedin', 'pateron']
     output = {}
+
     self.attributes.each do |key, value|
-      if social.include?(key) && value
+      if social.include?(key) && !(value.nil?)
         # output.merge({key => value})
         output[key] = value
       end
     end
+
     output
+
   end
+
 end

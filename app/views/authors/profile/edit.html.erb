@@ -19,7 +19,6 @@
       
           <div class="edit_biography">
             <p class="edit_header">My Biography:</p>
-            <!-- <%= f.label :bio, 'Biography:' %><br> -->
             <%= f.text_area :bio, class: "bio_area", placeholder: "Type your Message here!"%>
           </div>
 
@@ -125,18 +124,5 @@
     <% end %>
   </div>
 
-</section>
-
-<section>
-  <%= form_for [@author, @profile] do |f| %>
-
-        <%= f.label :pronouns %>
-        <%= f.text_area :pronouns %><br>
-        <%= f.label :speciality %>
-        <%= f.text_area :speciality %>
-        <br>
-
-        <%= f.submit %>
-  <% end %>
 </section>
 

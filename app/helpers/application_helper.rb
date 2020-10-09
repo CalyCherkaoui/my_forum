@@ -24,12 +24,12 @@ module ApplicationHelper
   def social_media_profile_helper(key, value)
     case key
     when "facebook" then icon_link(value, "fab fa-facebook-square", "https://www.facebook.com/")
-    when "instagram" then icon_link(value, "fab fa-twitch", "https://www.twitch.tv/")
+    when "twitch" then icon_link(value, "fab fa-twitch", "https://www.twitch.tv/")
     when "instagram" then icon_link(value, "fab fa-instagram", "https://www.instagram.com/")
-    when "instagram" then icon_link(value, "fab fa-twitter", "https://twitter.com/")
-    when "instagram" then icon_link(value, "fab fa-patreon", "https://www.patreon.com/")
-    when "instagram" then icon_link(value, "fas fa-blog", "")
-    when "instagram" then icon_link(value, "fab fa-pinterest-p", "https://www.pinterest.com/")
+    when "twitter" then icon_link(value, "fab fa-twitter", "https://twitter.com/")
+    when "pateron" then icon_link(value, "fab fa-patreon", "https://www.patreon.com/")
+    when "blog" then icon_link(value, "fas fa-blog", "")
+    when "pinterest" then icon_link(value, "fab fa-pinterest-p", "https://www.pinterest.com/")
     else return
     end
   end
