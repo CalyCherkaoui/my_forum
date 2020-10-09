@@ -3,4 +3,17 @@ class Profile < ApplicationRecord
 
   # VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   # validates :email, :format => VALID_EMAIL_REGEX
+
+  def social_media
+
+    social = ['facebook', 'instagram']
+    output = {}
+    self.attributes.each do |key, value|
+      if social.include?(key) && value
+        # output.merge({key => value})
+        output[key] = value
+      end
+    end
+    output
+  end
 end
