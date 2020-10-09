@@ -209,10 +209,22 @@
     font-family: $font_interf_bold;
     font-size: 1.7rem;
     color: $color_navigation;
-    margin-bottom: 0.8rem;
+  }
+
+  .pronouns {
+    font-family: $font_second_title;
+    font-size: 0.8rem;
+    color: $color_navigation;
+  }
+
+  .speciality {
+    font-family: $font_interf_bold;
+    font-size: 1rem;
+    color: $my_green;
   }
 
   .bio {
+    margin-top: 0.6rem;
     font-family: $font_ordinary_text;
     color: $color_txt_dark;
     font-weight: 550;

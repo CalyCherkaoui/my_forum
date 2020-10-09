@@ -92,9 +92,16 @@
 
     <div class="author_profile_bio">
       <div class="bio_card_container">
-        <div class="name">Dr. <%=@author.name%></div>
-      <div class="bio">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus architecto illo excepturi animi, expedita aut cupiditate quaerat eveniet, veritatis culpa similique atque laborum voluptas consequatur vero eaque! Rerum commodi impedit maxime? Dolorem accusamus id delectus sequi atque voluptas eaque nulla illum consectetur, odio error quo.</div>
+        <span class="name"><%= @author.profile.title%>. <%=@author.name%></span>
+        <span class="pronouns">(<%= @author.profile.pronouns%>)</span>
+        <span class="speciality"> | <%= @author.profile.speciality%></span>
+        <div class="bio"><%= @author.profile.bio %></div>
       </div>
+
+      <% @author.profile.social_media.each do |key, value| %>
+        <%= social_media_profile_helper(key, value) %>
+      <%end%>
+
     </div>
 
     <div class="author_profile_articles">
