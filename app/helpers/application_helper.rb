@@ -20,35 +20,21 @@ module ApplicationHelper
     end 
   end
 
-  # def authentication_view_helper(signed_in, current_author)
-  #   link1 = ''
-  #   link2 = ''
-  #   msg_html_1 = ''
-  #   msg_html_2 = ''
+  
+  def social_media_profile_helper(key, value)
+    case key
+    when "facebook" then icon_link(value, "fab fa-facebook", "https://www.facebook.com/")
+    when "instagram" then icon_link(value, "fab fa-instagram", "https://www.instagram.com/")
+    else return
+    end
+  end
 
-  #   if signed_in
-  #     link1 = link_to(author_path(current_author.id), class: "nav-list__link") do 
-  #      current_author.email
-  #     end
 
-  #     msg_html1 = content_tag(:li, link1, class: 'nav-list__item')
+  def icon_link(value, icon_class, url_root)
 
-  #     link2 = link_to( "log-out", destroy_author_session_path, class: "nav-list__link")
-  #     msg_html2 = content_tag(:li, link2, class: 'nav-list__item')
+    output = "<a href=\"#{url_root}#{value}\"><i class=\"#{icon_class}\"><\/i><\/a>".html_safe
 
-  #   else
-  #     link1 = link_to("Log-in", new_author_session_path, class: "nav-list__link")
-  #     msg_html_1 = content_tag(:li, link1, class: 'nav-list__item')
+  end
 
-  #     link2 = link_to("Sign-up", new_author_registration_path, class: "nav-list__link")
-  #     msg_html_2 = content_tag(:li, link2, class: 'nav-list__item')
-
-  #   end
-
-  #   final_html = msg_html_1 + msg_html_2
-
-  #   return final_html.html_safe
-
-  # end
 
 end
