@@ -29,6 +29,7 @@ $color_txt_light: #0f4c81;
 $my_dark:  #0A164E;
 $my_green: #37A000;
 $my_green_dark: #008329;
+$my_light_green: #bcf5bc;
 $tangerine: #da4221;
 $tangerine_dark: #D50000;
 $my_yellow: #E6A01E;
@@ -36,6 +37,7 @@ $my_yellow_dark: hsl(39, 92%, 35%);
 $light-blue: #2ab2c0;
 $classic-blue: #0f4c81;
 $my_white: white;
+$my_grey: grey;
 /* Typography */
 
 // navigation typography
@@ -50,7 +52,7 @@ $font_interf_small: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
 
 // article typography
 $font_big_title: 'Abril Fatface', cursive, 'Open Sans', sans-serif;
-$font_ordinary_text: 'Open Sans', sans-serif;
+$font_ordinary_text: 'Courier New', Courier, monospace;
 $font_second_title:  'Raleway', sans-serif;
 
 // box models
@@ -119,3 +121,4 @@ body {
   min-width: 22rem;
   display: block;
 }
+

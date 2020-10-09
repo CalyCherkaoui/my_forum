@@ -370,7 +370,7 @@
           null,
           null,
           null,
-          null,
+          1,
           null,
           null,
           null,
@@ -426,7 +426,7 @@
           null,
           null,
           null,
-          null,
+          1,
           null,
           null,
           null,
@@ -553,7 +553,14 @@
           1,
           1,
           1,
+          null,
           1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
           null,
           null
         ]
@@ -565,6 +572,8 @@
           null,
           1,
           null,
+          1,
+          1,
           null
         ]
       },
@@ -578,12 +587,117 @@
       "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/helpers/authors_helper.rb": {
+        "lines": [
+          1,
           null
         ]
       },
       "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/app/helpers/static_pages_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/spec/helpers/authors_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/spec/models/author_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/spec/requests/authors_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
           null
         ]
       },
@@ -671,6 +785,6 @@
         ]
       }
     },
-    "timestamp": 1601239871
+    "timestamp": 1601767942
   }
 }

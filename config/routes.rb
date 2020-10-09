@@ -5,10 +5,13 @@ Rails.application.routes.draw do
 
   devise_for :authors, controllers: {
     sessions: 'authors/sessions',
-    registrations: 'authors/registrations'
+    registrations: 'authors/registrations',
+    passwords: 'authors/passwords'
   }
 
-  resources :authors, only: %i[index show destroy]
+  resources :authors do
+    resource :profile, :controller => 'authors/profile'
+  end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

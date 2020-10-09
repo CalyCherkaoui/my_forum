@@ -1,36 +1,5 @@
 module ApplicationHelper
 
-  def authentication_view_helper
-    link1 = ''
-    link2 = ''
-    msg_html_1 = ''
-    msg_html_2 = ''
-
-    if author_signed_in?
-      link1 = link_to(author_path(current_author.id), class: "nav-list__link") do 
-       current_author.email
-      end
-
-      msg_html1 = content_tag(:li, link1, class: 'nav-list__item')
-
-      link2 = link_to( "log-out", destroy_author_session_path, class: "nav-list__link")
-      msg_html2 = content_tag(:li, link2, class: 'nav-list__item')
-
-    else
-      link1 = link_to("Log-in", new_author_session_path, class: "nav-list__link")
-      msg_html_1 = content_tag(:li, link1, class: 'nav-list__item')
-
-      link2 = link_to("Sign-up", new_author_registration_path, class: "nav-list__link")
-      msg_html_2 = content_tag(:li, link2, class: 'nav-list__item')
-
-    end
-
-    final_html = msg_html_1 + msg_html_2
-
-    return final_html.html_safe
-
-  end
-
   def flash_class_helper(type)
     case type.to_sym
     when :notice then "success"
@@ -50,5 +19,27 @@ module ApplicationHelper
     when :warning then "Warning!"
     end 
   end
+
+  
+  def social_media_profile_helper(key, value)
+    case key
+    when "facebook" then icon_link(value, "fab fa-facebook-square", "https://www.facebook.com/")
+    when "twitch" then icon_link(value, "fab fa-twitch", "https://www.twitch.tv/")
+    when "instagram" then icon_link(value, "fab fa-instagram", "https://www.instagram.com/")
+    when "twitter" then icon_link(value, "fab fa-twitter", "https://twitter.com/")
+    when "pateron" then icon_link(value, "fab fa-patreon", "https://www.patreon.com/")
+    when "blog" then icon_link(value, "fas fa-blog", "")
+    when "pinterest" then icon_link(value, "fab fa-pinterest-p", "https://www.pinterest.com/")
+    else return
+    end
+  end
+
+
+  def icon_link(value, icon_class, url_root)
+
+    output = "<a href=\"#{url_root}#{value}\"><i class=\"#{icon_class}\"><\/i><\/a>".html_safe
+
+  end
+
 
 end

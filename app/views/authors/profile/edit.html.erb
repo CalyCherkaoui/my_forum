@@ -1,0 +1,128 @@
+<% provide(:title, 'Edit Profile') %>
+<section id="author_edit">
+  
+  <div class="author_edit_header">
+    <h1>
+      Hi
+      <%= link_to author_path(current_author) do %>
+        @<%= current_author.username %>
+      <% end %>
+       !
+      </h1>
+    <h3>Your readers are thrilled to know more about you. Feel free to edit your biography and to add a nice profile photo.</h3>
+  </div>
+
+
+  <div class="author_edit_editor">
+    <%= form_for [@author, @profile] do |f| %>
+      <div class="author_edit_editor_wrapper">
+      
+          <div class="edit_biography">
+            <p class="edit_header">My Biography:</p>
+            <%= f.text_area :bio, class: "bio_area", placeholder: "Type your Message here!"%>
+          </div>
+
+          <div class="edit_name_social">
+
+            <p class="edit_header">Follow me:</p>
+
+            <table class="edit_social_table">
+
+              <tr>
+                <td><i class="fas fa-at"></i></td>
+                <td><%= f.label :email, 'Email:' %></td>
+                <td><%= f.text_field :email, placeholder: "Publically displayed email address" %></td>
+              </tr>
+
+              <tr>
+                <td><i class="fas fa-globe-africa"></i></td>
+                <td><%= f.label :website_url, 'Web Site:' %></td>
+                <td><%= f.text_field :website_url, placeholder: "https://....." %></td>
+              </tr>
+
+              <tr>
+                <td><i class="fas fa-blog"></i></td>
+                <td><%= f.label :blog, 'Blog:' %></td>
+                <td><%= f.text_field :blog, placeholder: "https://....." %></td>
+              </tr>
+
+              <tr>
+                <td><i class="fab fa-facebook-square"></i></td>
+                <td><%= f.label :facebook, 'Facebook:' %></td>
+                <td><%= f.text_field :facebook, placeholder: "https://www.facebook.com/..." %></td>
+              </tr>
+
+              <tr>
+                <td><i class="fab fa-twitch"></i></td>
+                <td><%= f.label :twitch, 'Twitch:' %></td>
+                <td><%= f.text_field :twitch, placeholder: "https://www.twitch.tv/..." %></td>
+              </tr>
+
+              <tr>
+                <td><i class="fab fa-instagram"></i></td>
+                <td><%= f.label :instagram, 'Instagram:' %></td>
+                <td><%= f.text_field :instagram, placeholder: "https://www.instagram.com/..." %></td>
+              </tr>
+
+              <tr>
+                <td><i class="fab fa-twitter"></i></td>
+                <td><%= f.label :twitter, 'Twitter:' %></td>
+                <td><%= f.text_field :twitter, placeholder: "https://www.twitter.com/..." %></td>
+              </tr>
+
+              <tr>
+                <td><i class="fab fa-patreon"></i></td>
+                <td><%= f.label :pateron, 'Pateron:' %></td>
+                <td><%= f.text_field :pateron, placeholder: "https://www.pateron.com/..." %></td>
+              </tr>
+
+              <tr>
+                <td><i class="fab fa-pinterest-p"></i></td>
+                <td><%= f.label :pinterest, 'Pinterest:' %></td>
+                <td><%= f.text_field :pinterest, placeholder: "https://www.pinterest.com/..." %></td>
+              </tr>
+
+            </table>
+
+          </div>
+          <div class="edit_photo">
+            <p class="edit_header">My Profile photo:</p>
+          </div>
+          <div class="edit_attributes">
+            <p class="edit_header">About me:</p>
+            <table class="edit_aboutme_table">
+              <tr>
+                <td><%= f.label :pronouns , "Pronouns"%></td>
+                <td><%= f.text_field :pronouns, placeholder: "She/her , Him/he..."%></td>
+              </tr>
+
+              <tr>
+                <td><%= f.label :title %></td>
+                <td><%= f.text_field :title, placeholder: "Dr , Phd, Pr...."%></td>
+              </tr>
+
+              <tr>
+                <td><%= f.label :speciality %></td>
+                <td><%= f.text_field :speciality, placeholder: "Nutrition, Food journalist ...."%></td>
+              </tr>
+
+            </table>
+
+            <div class="submit_area">
+
+              <%= f.submit %>
+
+              <p>
+                <%= link_to 'Edit your account registration', edit_author_registration_path %> |
+                <%= link_to 'Change your password',  edit_author_password_path %>
+              </p>
+
+            </div>
+
+          </div>
+      </div>
+    <% end %>
+  </div>
+
+</section>
+
