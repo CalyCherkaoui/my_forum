@@ -37,7 +37,7 @@ group :test do
   gem 'guard',                    '2.16.2'
   gem 'guard-minitest',           '2.4.6'
   gem 'simplecov',                 require: false
-  gem 'database_cleaner-active_record'
+  gem 'database_cleaner', '~> 1.8', '>= 1.8.5'
   gem 'shoulda-matchers',         '~> 4.0'
   gem 'shoulda',                  '~> 4.0'
   gem 'shoulda-context',          '~> 2.0'
