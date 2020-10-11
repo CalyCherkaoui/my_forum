@@ -59,7 +59,7 @@ class Authors::ProfileController < ApplicationController
                               :id, :pronouns, :title, :speciality, :bio,
                               :website_url, :blog, :email, :facebook,
                               :twitch, :twitter, :instagram, :pinterest,
-                              :linkedin, :pateron
+                              :linkedin, :pateron, :image
       )
   end
 end

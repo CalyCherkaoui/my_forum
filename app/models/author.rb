@@ -6,7 +6,7 @@ class Author < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :email, uniqueness: true
   validates :username, uniqueness: true, presence: true
-  has_one :profile, dependent: :destroy
+  has_one :profile, dependent: :destroy, autosave: true
   # accepts_nested_attributes_for :profile, allow_destroy: true, update_only: true
 
   protected
@@ -14,4 +14,5 @@ class Author < ApplicationRecord
   def set_profile
     Profile.create!({ :author_id => self.id})
   end
+
 end
