@@ -9,6 +9,7 @@ gem 'turbolinks', '5.2.1'
 gem 'jbuilder',   '2.10.0'
 gem 'bootsnap',   '1.4.6', require: false
 gem 'devise'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 
 group :development, :test do
   gem 'sqlite3', '1.4.2'
