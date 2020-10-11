@@ -565,6 +565,20 @@
           null
         ]
       },
+      "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/spec/factories/profile.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/calypso/ubuntuDocs/my_Rails_projects/my_forum/config/routes.rb": {
         "lines": [
           1,
@@ -700,7 +714,7 @@
           null,
           null,
           1,
-          24,
+          25,
           null,
           null,
           1,
@@ -717,11 +731,11 @@
           null,
           null,
           1,
-          24,
+          25,
           null,
           null,
           1,
-          24,
+          25,
           null,
           null,
           null
@@ -778,6 +792,8 @@
           null,
           1,
           1,
+          2,
+          null,
           null
         ]
       },
@@ -901,6 +917,6 @@
         ]
       }
     },
-    "timestamp": 1602277246
+    "timestamp": 1602279793
   }
 }
